@@ -11,11 +11,8 @@ export default function navBar() {
           <li>
             <Link to="/PlantsPage">Plantes</Link>
           </li>
-          <li className="border border-green-800 p-3 rounded-xl">
-            <Link to="/"> S'enregister </Link>
-          </li>
           <li className="bg-green-800 p-3 rounded-xl text-white">
-            <Link to="/"> Se connecter </Link>
+            <Link to="/RecipePage"> Recettes </Link>
           </li>
         </ul>
       </div>

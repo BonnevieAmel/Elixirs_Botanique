@@ -4,19 +4,18 @@ import axios from "axios";
 import PlantCard from "../components/PlantCard";
 
 function PlantPage() {
+  const { id } = useParams();
   const [plant, setPlant] = useState(null);
   const [error, setError] = useState(null);
-  const { id } = useParams();
 
   useEffect(() => {
     axios
-      .get(`/api/plants/${id}`)
+      .get(`${import.meta.env.VITE_API_URL}/api/plants/${id}`)
       .then((response) => {
         setPlant(response.data);
       })
-      // eslint-disable-next-line no-shadow
-      .catch((error) => {
-        console.error("There was an error fetching the plant!", error);
+      .catch((err) => {
+        console.error("There was an error fetching the plant!", err);
         setError("There was an error fetching the plant!");
       });
   }, [id]);
@@ -26,7 +25,7 @@ function PlantPage() {
   }
 
   if (!plant) {
-    return <div>Loading...</div>;
+    return <div>Chargement...</div>;
   }
 
   return <PlantCard plant={plant} />;

@@ -3,20 +3,22 @@ import { Link } from "react-router-dom";
 
 function PlantCard({ plant }) {
   return (
-    <div className="plant-card">
+    <div className="bg-gradient-to-r from-emerald-500 to-emerald-900">
       <Link to={`/plant/${plant.id}`}>
-        <img src={plant.image_url} alt={plant.name} />
-        <h2>{plant.name}</h2>
+        <img src={plant.image_url} alt={plant.Name} />
       </Link>
+      <h1>
+        <strong> Nom : </strong> {plant.Name}
+      </h1>
       <p>
-        <strong>Scientific Name:</strong> {plant.scientific_name}
+        <strong>Nom Scientifique :</strong> {plant.scientificName}
       </p>
       <p>{plant.description}</p>
       <p>
-        <strong>Virtues:</strong> {plant.virtues}
+        <strong>Vertues :</strong> {plant.virtues}
       </p>
       <p>
-        <strong>Contraindications:</strong> {plant.contraindications}
+        <strong>Contre Indications:</strong> {plant.contraindications}
       </p>
     </div>
   );
@@ -25,8 +27,8 @@ function PlantCard({ plant }) {
 PlantCard.propTypes = {
   plant: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    scientific_name: PropTypes.string,
+    Name: PropTypes.string,
+    scientificName: PropTypes.string,
     description: PropTypes.string,
     virtues: PropTypes.string,
     contraindications: PropTypes.string,

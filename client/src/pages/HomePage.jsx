@@ -8,23 +8,25 @@ function HomePage() {
 
   useEffect(() => {
     axios
-      .get("/api/plants")
+      .get(`${import.meta.env.VITE_API_URL}/api/plants`)
       .then((response) => {
-        setPlants(response.data);
+        console.info("Response data:", response.data);
+        if (Array.isArray(response.data)) {
+          setPlants(response.data);
+        } else {
+          console.error("Expected an array but got:", response.data);
+          setError("Unexpected response format");
+        }
       })
       // eslint-disable-next-line no-shadow
       .catch((error) => {
-        console.error("There was an error fetching the plants!", error);
-        setError("There was an error fetching the plants!");
+        console.error("error fetching the plants!", error);
+        setError("error fetching the plants!");
       });
   }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
-  }
-
-  if (plants.length === 0) {
-    return <div>Loading...</div>;
   }
 
   return (
