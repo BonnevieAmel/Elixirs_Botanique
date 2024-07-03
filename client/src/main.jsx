@@ -3,9 +3,11 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import "./Index.css";
 import App from "./App";
 import HomePage from "./pages/HomePage";
 import PlantPage from "./pages/PlantPage";
+import PlantsPage from "./pages/PlantsPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
       {
         element: <PlantPage />,
         path: "/PlantPage/:id",
+      },
+      {
+        element: <PlantsPage />,
+        path: "/PlantsPage",
       },
     ],
   },

@@ -15,8 +15,8 @@ function PlantPage() {
         setPlant(response.data);
       })
       .catch((err) => {
-        console.error("There was an error fetching the plant!", err);
-        setError("There was an error fetching the plant!");
+        console.error("error fetching the plant!", err);
+        setError("error fetching the plant!");
       });
   }, [id]);
 

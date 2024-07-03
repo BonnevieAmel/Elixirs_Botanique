@@ -1,21 +1,37 @@
 import { Link } from "react-router-dom";
+import LogoEB from "../assets/images/LogoEB.png";
 
-export default function navBar() {
+function NavBar() {
   return (
-    <nav className="h-28 uppercase">
-      <div className=" flex">
-        <ul className="w-screen flex flex-end justify-center space-x-12 ml-[20%] text-s font-bold flex-row items-center ">
-          <li className="green">
-            <Link to="/">Accueil</Link>
+    <nav className="bg-[#fff7ed] text-black p-4">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div className="flex items-center">
+          <img src={LogoEB} alt="Logo" className="h-12 mr-2" />
+          <span className="text-lg md:hidden">Elixirs Botanique</span>
+        </div>
+        <div className="hidden md:flex justify-center flex-grow">
+          <span className="text-xl">Elixirs Botanique</span>
+        </div>
+        <ul className="flex space-x-4 mt-4 md:mt-0">
+          <li>
+            <Link to="/" className="hover:underline">
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link to="/PlantsPage">Plantes</Link>
+            <Link to="/PlantsPage" className="hover:underline">
+              Plantes
+            </Link>
           </li>
-          <li className="bg-green-800 p-3 rounded-xl text-white">
-            <Link to="/RecipePage"> Recettes </Link>
+          <li>
+            <Link to="/recipes" className="hover:underline">
+              Recettes
+            </Link>
           </li>
         </ul>
       </div>
     </nav>
   );
 }
+
+export default NavBar;
