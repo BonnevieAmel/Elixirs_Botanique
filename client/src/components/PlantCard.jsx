@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function PlantCard({ plant, large }) {
   return (
     <div
       className={`w-60 p-2 object-cover shadow-lg rounded-lg bg-[#fff7ed] overflow-hidden ${large ? "h-full" : ""}`}
     >
-      <Link to={`/PlantPage/${plant.id}`}>
+      <Link to={`/plants/${plant.id}`}>
         <img
           src={plant.image}
           alt={plant.plantsName}
@@ -24,6 +24,9 @@ function PlantCard({ plant, large }) {
         <p className="text-gray-700 mb-1">
           <strong>Contre Indications:</strong> {plant.contraindications}
         </p>
+        <Link to={`/plants/edit/${plant.id}`} className="text-blue-500">
+          Modifier
+        </Link>
       </div>
     </div>
   );

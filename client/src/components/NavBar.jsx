@@ -19,7 +19,7 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/PlantsPage" className="hover:underline">
+            <Link to="/Plants" className="hover:underline">
               Plantes
             </Link>
           </li>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import PlantCard from "./PlantCard";
@@ -34,6 +35,14 @@ function PlantList() {
       <section className="w-[90%] h-[90%] shadow-lg rounded-lg bg-[#fff7ed] overflow-hidden flex flex-col">
         <NavBar />
         <div className="container mx-auto p-8 flex-1 overflow-y-auto">
+          <div className="flex justify-end mb-4">
+            <Link
+              to="/plants/new"
+              className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              Ajouter une nouvelle Plante
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {plants.map((plant) => (
               <PlantCard key={plant.id} plant={plant} />

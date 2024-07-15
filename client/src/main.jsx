@@ -8,6 +8,7 @@ import App from "./App";
 import HomePage from "./pages/HomePage";
 import PlantPage from "./pages/PlantPage";
 import PlantsPage from "./pages/PlantsPage";
+import PlantForm from "./pages/PlantForm";
 
 const router = createBrowserRouter([
   {
@@ -19,11 +20,19 @@ const router = createBrowserRouter([
       },
       {
         element: <PlantPage />,
-        path: "/PlantPage/:id",
+        path: "/Plants/:id",
       },
       {
         element: <PlantsPage />,
-        path: "/PlantsPage",
+        path: "/Plants",
+      },
+      {
+        element: <PlantForm />,
+        path: "/Plants/edit/:id",
+      },
+      {
+        element: <PlantForm />,
+        path: "/Plants/new",
       },
     ],
   },
