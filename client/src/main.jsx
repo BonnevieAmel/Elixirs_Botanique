@@ -10,6 +10,8 @@ import HomePage from "./pages/HomePage";
 import PlantPage from "./pages/PlantPage";
 import PlantsPage from "./pages/PlantsPage";
 import PlantForm from "./pages/PlantForm";
+import Recipes from "./pages/Recipes";
+import DetailsRecipe from "./pages/DetailsRecipe";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         element: <PlantForm />,
         path: "/Plants/new",
+      },
+      {
+        element: <Recipes />,
+        path: "/Recipes",
+      },
+      {
+        element: <DetailsRecipe />,
+        path: "/Recipes/:id",
       },
     ],
   },

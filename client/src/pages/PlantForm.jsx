@@ -68,7 +68,7 @@ function PlantForm() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="plantsName" className="block text-sm font-medium">
-              Plant Name
+              Nom
             </label>
             <input
               type="text"
@@ -85,7 +85,7 @@ function PlantForm() {
               htmlFor="scientificName"
               className="block text-sm font-medium"
             >
-              Scientific Name
+              Nom Scientifique
             </label>
             <input
               type="text"
@@ -112,7 +112,7 @@ function PlantForm() {
           </div>
           <div>
             <label htmlFor="virtues" className="block text-sm font-medium">
-              Virtues
+              Vertus
             </label>
             <textarea
               id="virtues"
@@ -128,7 +128,7 @@ function PlantForm() {
               htmlFor="contraindications"
               className="block text-sm font-medium"
             >
-              Contraindications
+              Contre-indications
             </label>
             <textarea
               id="contraindications"
