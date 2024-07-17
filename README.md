@@ -133,6 +133,6 @@ v1.0 en cours
 - Liaison avec la base de données
 - Finition du style
 
-### 👥 Créateur :
+### 👥 Créatrice :
 
 [Amel BONNEVIE](https://github.com/BonnevieAmel)
