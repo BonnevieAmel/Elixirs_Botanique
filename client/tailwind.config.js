@@ -6,7 +6,12 @@ export default {
     fontFamily: {
       Open: ["Open", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        DM: "DM Sans",
+        I: "Inter",
+      },
+    },
   },
   plugins: [],
 };
