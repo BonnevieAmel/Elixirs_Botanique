@@ -6,7 +6,10 @@ function NavBar() {
     <nav className="bg-[#fff7ed] text-black p-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="flex items-center">
-          <img src={LogoEB} alt="Logo" className="size-48 mr-2" />
+          <Link to="/" className="hover:underline">
+            <img src={LogoEB} alt="Logo" className="size-48 mr-2" />
+          </Link>
+
           <span className="text-lg md:hidden">Elixirs Botanique</span>
         </div>
         <div className="hidden md:flex justify-center flex-grow">

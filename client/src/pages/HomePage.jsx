@@ -60,7 +60,6 @@ function HomePage() {
                 </div>
               )}
             </div>{" "}
-            {/* Ajout de la parenthèse fermante ici */}
           </div>
         </section>
       </div>
