@@ -1,7 +1,7 @@
 # ELIXIRS_BOTANIQUE
 
 <p align="center">
-<img src="./client/src/assets/images/LogoEB.png" height=200px>
+<img className="bg-white" src="./client/src/assets/images/LogoEB.png" height=400px>
 </p>
 
 ## 🚀 Bienvenue sur mon projet checkpoint 4 réalisé à la Wild Code School <br>
