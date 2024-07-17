@@ -60,7 +60,7 @@
 ```mermaid
 graph TD;
     Accueil;
-    Accueil-->Pizza-details;
+    Accueil-->PlantsPage;
     Error404;
 ```
 
