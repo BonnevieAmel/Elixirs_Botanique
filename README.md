@@ -1,7 +1,7 @@
 # ELIXIRS_BOTANIQUE
 
 <p align="center">
-<img className="bg-white" src="./client/src/assets/images/LogoEB.png" height=400px>
+<img className="bg-white" src="./client/src/assets/images/LogoEB.png" height=800px>
 </p>
 
 ## 🚀 Bienvenue sur mon projet checkpoint 4 réalisé à la Wild Code School <br>
@@ -64,6 +64,13 @@ graph TD;
     Error404;
 ```
 
+graph TD;
+Accueil;
+Accueil-->Plantes;
+Plantes-->Plante-Id;
+Accueil-->Recettes;
+Recettes-->Recette-Id;
+
 ## 📈 Statut du projet
 
 v1.0 en cours
@@ -85,7 +92,7 @@ v1.0 en cours
 
 ## 💻 Modélisation de la base de données
 
-<img src="" alt="screen base de données"> <img src="" alt="screen base de données">
+<img src="./client/src/assets/images/BDD.png" alt="screen base de données"> <img src="" alt="screen base de données">
 
 ## 🛠️ Setup & utilisation
 
