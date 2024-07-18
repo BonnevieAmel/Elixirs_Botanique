@@ -31,6 +31,7 @@ function PlantPage() {
   }
 
   return (
+  
     <motion.div
       initial={{ opacity: 0, rotateY: -90 }}
       animate={{ opacity: 1, rotateY: 0 }}

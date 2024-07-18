@@ -1,43 +1,39 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import TeaCard from "../components/TeaCard";
 
 function DetailsRecipe() {
   const { id } = useParams();
   const [tea, setTea] = useState(null);
-  const [plants, setPlants] = useState([]);
-  const { VITE_API_URL } = import.meta.env;
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`${VITE_API_URL}/api/plants`)
+      .get(`${import.meta.env.VITE_API_URL}/api/teas/${id}`)
       .then((response) => {
         setTea(response.data);
-        return axios.get(`${VITE_API_URL}/api/teasplants/recipe/${id}`);
       })
-      .then((response) => setPlants(response.data))
-      .catch((error) => console.error("Error fetching tea details:", error));
-  }, [VITE_API_URL, id]);
+      .catch((err) => {
+        console.error("error fetching the tea recipe!", err);
+        setError("error fetching the tea recipe!");
+      });
+  }, [id]);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   if (!tea) {
-    return <div>Loading...</div>;
+    return <div>Chargement...</div>;
   }
 
   return (
-    <div>
-      <h1>{tea.teaName}</h1>
-      <p>{tea.description}</p>
-      <h2>Plantes utilisées</h2>
-      <ul>
-        {plants.map((plant) => (
-          <li key={plant.id}>
-            {plant.plantsName} - {plant.quantity}
-          </li>
-        ))}
-      </ul>
-      <h2>Préparation</h2>
-      <p>{tea.preparation}</p>
-    </div>
+    <section className="flex justify-center items-center min-h-screen">
+      <div className="flex size-max m-auto w-96 h-auto">
+        <TeaCard tea={tea} />
+      </div>
+    </section>
   );
 }
 

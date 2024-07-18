@@ -12,6 +12,7 @@ import PlantsPage from "./pages/PlantsPage";
 import PlantForm from "./pages/PlantForm";
 import Recipes from "./pages/Recipes";
 import DetailsRecipe from "./pages/DetailsRecipe";
+import TeaForm from "./pages/TeaForm";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
       {
         element: <DetailsRecipe />,
         path: "/Recipes/:id",
+      },
+      {
+        element: <TeaForm />,
+        path: "/Recipesadd/",
+      },
+      {
+        element: <TeaForm />,
+        path: "/Recipe/edit/:id",
       },
     ],
   },
