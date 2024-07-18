@@ -1,6 +1,8 @@
 // Import the repository modules responsible for handling data operations on the tables
-const ItemRepository = require("./models/ItemRepository");
+
 const PlantsRepository = require("./models/PlantsRepository");
+const TeasRepository = require("./models/TeasRepository");
+const TeasPlantsRepository = require("./models/TeasPlantsRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -10,8 +12,10 @@ const tables = {};
 /* ************************************************************************* */
 
 // Register each repository as data access point for its table
-tables.item = new ItemRepository();
+
 tables.plants = new PlantsRepository();
+tables.teas = new TeasRepository();
+tables.teasplants = new TeasPlantsRepository();
 /* ************************************************************************* */
 
 // Use a Proxy to customize error messages when trying to access a non-existing table

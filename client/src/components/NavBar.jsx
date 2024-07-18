@@ -29,7 +29,7 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/recipes" className="hover:underline">
+            <Link to="/Recipes" className="hover:underline">
               Recettes
             </Link>
           </li>
