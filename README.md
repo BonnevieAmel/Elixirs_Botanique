@@ -60,16 +60,11 @@
 ```mermaid
 graph TD;
     Accueil;
-    Accueil-->PlantsPage;
-    Error404;
-```
-
-graph TD;
-Accueil;
 Accueil-->Plantes;
 Plantes-->Plante-Id;
 Accueil-->Recettes;
 Recettes-->Recette-Id;
+```
 
 ## 📈 Statut du projet
 
