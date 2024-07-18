@@ -28,7 +28,13 @@ function PlantPage() {
     return <div>Chargement...</div>;
   }
 
-  return <PlantCard plant={plant} />;
+  return (
+    <section className="flex justify-center items-center min-h-screen">
+      <div className="flex size-max m-auto w-96 h-auto">
+        <PlantCard plant={plant} />
+      </div>
+    </section>
+  );
 }
 
 export default PlantPage;
