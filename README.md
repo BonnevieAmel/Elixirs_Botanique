@@ -48,12 +48,13 @@
 - Les pages sont fonctionnels
 - Les informations proviennent de la base de données
 - Il est possible d'ajouter une plante
+- Il est possible de créer des recettes de thés, tisanes et boissons à base de plantes médicinales
 - la version mobile est fonctionnel
 
 ### 🔜 A venir :
 
 - Créer un compte / Se connecter
-- créer des recettes de thés, tisanes et boissons à base de plantes médicinales
+- Mettre des recettes en favoris
 
 ## 🏗️ Structure de l'application
 
