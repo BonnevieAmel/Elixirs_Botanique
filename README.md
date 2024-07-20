@@ -1,87 +1,141 @@
 # ELIXIRS_BOTANIQUE
 
-This project uses Harmonia. Harmonia is a framework meant to serve as a foundation for every project following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying a pedagogical tool.
+<p align="center">
+<img className="bg-white" src="./client/src/assets/images/LogoEB.png" height=800px>
+</p>
 
-## Setup & Use
+## 🚀 Bienvenue sur mon projet checkpoint 4 réalisé à la Wild Code School <br>
 
-**Windows users:** be sure to run these commands in a git terminal to avoid [issues with newline formats](https://en.wikipedia.org/wiki/Newline#Issues_with_different_newline_formats):
+## 💥 Les compétences :
 
+### 🌞 Développer la partie front-end d'une application web ou web mobile sécurisée :
+
+- Maquetter des interfaces utilisateur web ou web mobile
+- Réaliser des interfaces utilisateur statiques web ou web mobile
+- Développer la partie dynamique des interfaces utilisateur web ou web mobile
+
+### 📈 Développer la partie back-end d'une application web ou web mobile sécurisée :
+
+- Mettre en place une base de données relationnelle
+- Développer des composants d'accès aux données SQL et NoSQL
+- Développer des composants métier coté serveur
+
+### 👑 Les exigences
+
+- Le site doit être responsive
+- Les données sont stockées dans une base de données
+- Le projet doit être disponible sur ton compte Github personnel
+- N'oublie pas tes acronymes préférés : KISS, DRY, SOLID et RTFM !
+
+## 💻 Aperçu de la version Desktop :
+
+<img src=""  alt="screen desktop"> <img src=""  alt="screen desktop"> <img src="" alt="screen desktop">
+
+## 📱 Aperçu de la version mobile :
+
+<img src="" alt="screen mobile"> <img src="" alt="screen mobile"> <img src=""  alt="screen mobile">
+
+## 🛠️ Fonctionnalités :
+
+### 👥 Partie Utilisateur :
+
+- L'utilisateur peut voir une liste de plantes provenant du back.
+- L'utilisateur peut cliquer sur une plante pour voir les détails.
+- L'utilisateur peut ajouter, modifier et supprimer une plante.
+
+### 📝 Dans cette version :
+
+- Les pages sont fonctionnels
+- Les informations proviennent de la base de données
+- Il est possible d'ajouter une plante
+- Il est possible de créer des recettes de thés, tisanes et boissons à base de plantes médicinales
+- la version mobile est fonctionnel
+
+### 🔜 A venir :
+
+- Créer un compte / Se connecter
+- Mettre des recettes en favoris
+
+## 🏗️ Structure de l'application
+
+```mermaid
+graph TD;
+    Accueil;
+Accueil-->Plantes;
+Plantes-->Plante-Id;
+Accueil-->Recettes;
+Recettes-->Recette-Id;
 ```
-git config --global core.eol lf
-git config --global core.autocrlf false
-```
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm install`
-- Create environment files (`.env`) in both `server` and `client`: you can copy `.env.sample` files as starters (**don't** delete them)
+## 📈 Statut du projet
 
-### Available Commands
+v1.0 en cours
 
-- `db:migrate` : Run the database migration script
-- `db:seed` : Run the database seed script
-- `dev` : Starts both servers (client + server) in one terminal
-- `dev:client` : Starts the React client
-- `dev:back` : Starts the Express server
-- `lint` : Runs validation tools (will be executed on every _commit_, and refuse unclean code)
+## Technos utilisé
 
-## FAQ
+![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-### Tools
+## 📊 Wireframe :
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
+### 🖌️ Design du site sur Figma :
 
-## Deployment with Traefik
+<img src="" alt="screen wireframe"> <img src="" alt="screen wireframe"> <img src="" alt="screen themes">
 
-> ⚠️ Prerequisites : You must have installed and configured Traefik on your VPS beforehand.
-> https://github.com/WildCodeSchool/vps-traefik-starter-kit/
+## 💻 Modélisation de la base de données
 
-For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
+<img src="./client/src/assets/images/BDD.png" alt="screen base de données"> <img src="" alt="screen base de données">
 
-- SSH_HOST : IP address of your VPS
-- SSH_USER : SSH login to your VPS
-- SSH_PASSWORD : SSH connection password to your VPS
+## 🛠️ Setup & utilisation
 
-And a public variable from the tab `/settings/variables/actions` :
+### 📜 Commandes disponibles
 
-- PROJECT_NAME : the name of the project used to create the subdomain.
+- `npm i` : Initialisation du frontend et du backend, ainsi que de tous les outils
+- `npm run db:migrate` : Exécute le script de migration de la base de données
+- `npm run dev` : Démarre les deux serveurs (frontend + backend) dans un seul terminal
+- `npm run dev:client` : Démarre le serveur frontend React
+- `npm run dev:server` : Démarre le serveur backend Express
+- `lint` : Exécute les outils de validation et refuse le code non conforme (sera exécuté à chaque _commit_)
+- `fix` : Corrige les erreurs de linter (exécutez-le si `lint` grogne sur votre code !)
 
-> ⚠️ Warning : underscores are not allowed. They can cause trouble with the let's encrypt certificate
+## 📄 Plus d'informations
 
-Use this same tab to add the other environment variables required for the project if any.
+- Le modèle utilisé pour ce projet est un modèle de fondation Fullstack réalisé par la Wild Code School.
 
-Only the server will be accessible. The root path `"/"` will redirect to the dist folder of your client. In order to allow that, please uncomment the line as explained in `server/src/app.js` (Line 102).
-Because the server will also serve the client, the global variable VITE_SERVER_URL will be set with an empty string.
+- N'oubliez pas de créer vos fichiers .env pour le frontend et le backend en copiant les fichiers .env.sample de chaque répertoire.
 
-Your url will be ` https://${PROJECT-NAME}.${subdomain}.wilders.dev/`.
+### 🔧 Outils utilisé :
 
-### About the database
+- _Concurrently_ : Permet de lancer plusieurs commandes simultanément dans la même interface de ligne de commande (CLI).
+- _Husky_ : Permet d'exécuter des commandes spécifiques déclenchées par des événements git.
+- _Vite_ : Alternative à Create-React-App, offrant moins d'outils pour une expérience plus fluide.
+- _ESLint_ : Outil de "qualité du code", garantit que les règles choisies seront appliquées.
+- _Prettier_ : Outil de "qualité du code" également, se concentre sur le guide de style.
+- _Airbnb Standard_ : L'un des "standards" les plus connus, bien qu'il ne soit pas officiellement lié à ES/JS.
+- _Nodemon_ : Permet de redémarrer le serveur à chaque mise à jour d'un fichier .js.
 
-The database is automaticaly deployed with the name of your repo. During the build of the projet (`docker-entry.sh`), the `node migrate.js` command is executed in the server. If you want to seed automaticaly your database using the `seed.js` script, replace the `cd ./server && node ./bin/migrate.js && node index.js` by `cd ./server && node ./bin/migrate.js && node ./bin/seed.js && node index.js`
+## 📌 Organisation :
 
-### About public assets (pictures, fonts...)
+### 🏃🏼 Sprint 1 :
 
-Don't use any public folder on your client. This folder won't be accessible online. You may move your public assets in the `server/public` folder. Prefer [static assets](https://vitejs.dev/guide/assets) when possible.
+- Maquettage du projet sur Figma
+- Modélisation de la base de données
 
-### About Specific Environment Variables (e.g., Email)
+### 🏃🏼 Sprint 2 :
 
-Students should use the template provided in the `*.env.sample*` file as `<PROJECT_NAME><SPECIFIC_NAME>=<THE_VARIABLE>`.
+- Initialisation du projet
+- Création de la partie Back-End
 
-> ⚠️ **Warning:** The `PROJECT_NAME` should match the one used in the Git public variable.
+### 🏃🏼 Sprint 3 :
 
-To add it during deployment, follow these 2 steps:
+- Création de la partie Front-End
+- Liaison avec la base de données
+- Finition du style
 
-- Add the following variable to the `docker-compose.prod.yml` file (as shown in the example: `PROJECT_NAME_SPECIFIC_NAME: ${PROJECT_NAME_SPECIFIC_NAME}`).
-- Connect to your server via SSH. Open the global `.env` file in Traefik (`nano ./traefik/data/.env`). Add the variable with the correct value and save the file.
-- Afterward, you can initiate automatic deployment. Docker will not refresh during this process.
+### 👥 Créatrice :
 
-### About Logs
-
-If you want to access the logs of your online projet (to follow the deployement or to watch any bug error), connect to your VPS (`ssh user@host`).
-Then, go on your specific project and run  `docker compose logs -t -f`.
+[Amel BONNEVIE](https://github.com/BonnevieAmel)
