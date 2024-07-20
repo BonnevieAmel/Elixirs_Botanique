@@ -23,6 +23,21 @@ CREATE TABLE teasplants (
   FOREIGN KEY (tea_id) REFERENCES teas(id),
   FOREIGN KEY (plant_id) REFERENCES plants(id)
 );
+
+create table roles (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name VARCHAR(80) NOT NULL
+);
+
+create table users (
+    id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    roles_id INT NOT NULL,
+    pseudo VARCHAR(80) NOT NULL,
+    email VARCHAR(255) NOT NULL unique,
+    password VARCHAR(255) NOT NULL,
+    FOREIGN KEY (roles_id) REFERENCES roles (id)
+);
+
 INSERT INTO plants (plantsName, scientificName, description, virtues, contraindications, image) VALUES
 ('Camomille', 'Matricaria chamomilla', 'La camomille est une plante herbacée annuelle de la famille des Astéracées.', 'Apaisante, anti-inflammatoire, antispasmodique.', 'Peut provoquer des allergies chez certaines personnes.', 'https://image.noelshack.com/fichiers/2024/27/2/1719936454-camomille.png'),
 ('Bourrache', 'Borago officinalis', 'La bourrache est une plante herbacée annuelle de la famille des Boraginacées.', 'Diurétique, expectorante, anti-inflammatoire.', 'Éviter en cas de troubles hépatiques.', 'https://image.noelshack.com/fichiers/2024/27/2/1719936481-bourrache.png'),
@@ -46,4 +61,7 @@ INSERT INTO teasplants (tea_id, plant_id, quantity) VALUES
 (1, 4, '1 cuillère à café'),
 (2, 8, '1 cuillère à soupe'),
 (2, 6, '1 cuillère à café');
+
+INSERT INTO roles (name)
+VALUES ('Admin'), ('Utilisateur');
 

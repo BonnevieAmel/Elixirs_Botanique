@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         element: <TeaForm />,
-        path: "/Recipesadd/",
+        path: "/teas/new",
       },
       {
         element: <TeaForm />,

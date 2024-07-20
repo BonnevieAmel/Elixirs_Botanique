@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import PlantCard from "../components/PlantCard";
+import NavBar from "../components/NavBar";
 
 function PlantPage() {
   const { id } = useParams();
@@ -29,11 +30,14 @@ function PlantPage() {
   }
 
   return (
-    <section className="flex justify-center items-center min-h-screen">
-      <div className="flex size-max m-auto w-96 h-auto">
-        <PlantCard plant={plant} />
-      </div>
-    </section>
+    <>
+      <NavBar />
+      <section className="flex justify-center items-center min-h-screen">
+        <div className="flex size-max m-auto w-96 h-auto">
+          <PlantCard plant={plant} />
+        </div>
+      </section>
+    </>
   );
 }
 
